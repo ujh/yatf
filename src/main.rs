@@ -1,3 +1,13 @@
+#![feature(stmt_expr_attributes)]
+
 fn main() {
-    println!("Hello, world!");
+    #[cfg(test)]
+    {
+        println!("running tests!");
+        ::std::process::exit(0);
+    }
+    #[cfg(not(test))]
+    {
+        println!("Hello, world!");
+    }
 }

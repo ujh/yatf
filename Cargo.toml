@@ -3,4 +3,6 @@ name = "yatf"
 version = "0.1.0"
 authors = ["Urban Hafner <contact@urbanhafner.com>"]
 
-[dependencies]
+[[bin]]
+name = "yatf"
+harness = false
